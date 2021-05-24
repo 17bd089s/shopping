@@ -26,6 +26,8 @@
 			<th>個数</th>
 			<th>小計</th>
 			<th>削除</th>
+			<th>追加</th>
+			<th>削減</th>
 		</tr>
 		<c:forEach items="${cart.items}" var="item">
 		<tr>
@@ -40,10 +42,24 @@
 					<input type="submit" value="削除" />
 				</form>
 			</td>
+
+			<td>
+				<form action="/shopping/CartServlet?action=plus" method="post">
+				<input type="hidden" name="item_code" value="${item.value.code}" />
+				<input type="submit" value="＋" />
+				</form>
+			</td>
+
+			<td>
+				<form action="/shopping/CartServlet?action=mainus" method="post">
+				<input type="hidden" name="item_code" value="${item.value.code}" />
+				<input type="submit" value="－" />
+				</form>
+			</td>
 		</tr>
 		</c:forEach>
 		<tr>
-			<td colspan="6" style="text-align:right">総計：${cart.total}円</td>
+			<td colspan="8" style="text-align:right">総計：${cart.total}円</td>
 		</tr>
 	</table>
 	<form action="/shopping/OrderServlet?action=input_customer"" method="post">

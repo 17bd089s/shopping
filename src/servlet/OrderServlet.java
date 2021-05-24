@@ -97,6 +97,9 @@ public class OrderServlet extends HttpServlet {
 				int orderNumber = dao.saveOrder(customer, cart);
 				// リクエストスコープに注文番号を登録
 				request.setAttribute("orderNumber", orderNumber);
+
+
+
 				// 完了画面に遷移
 				this.gotoPage(request, response, "/order.jsp");
 			} catch (DAOException e) {
