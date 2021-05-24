@@ -80,6 +80,8 @@ public class OrderServlet extends HttpServlet {
 			// 確認画面に遷移
 			this.gotoPage(request, response, "/confirm.jsp");
 
+
+
 		// actionキーが「order」の場合：完了画面に遷移
 		} else if (action.equals("order")) {
 			// 顧客情報を取得
@@ -102,11 +104,19 @@ public class OrderServlet extends HttpServlet {
 
 				// 完了画面に遷移
 				this.gotoPage(request, response, "/order.jsp");
+				// cartを初期化
+
+				session.invalidate();
+				RequestDispatcher rd = request.getRequestDispatcher("/order.jsp");
+				rd.forward(request, response);
+
+
 			} catch (DAOException e) {
 				e.printStackTrace();
 				request.setAttribute("message", "内部エラーが発生しました。");
 				this.gotoPage(request, response, "/errInternal.jsp");
 			}
+
 		} else {
 			request.setAttribute("message", "正しく操作してください。");
 			this.gotoPage(request, response, "/errInternal.jsp");
