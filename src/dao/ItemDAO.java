@@ -10,7 +10,7 @@ import java.util.List;
 
 import bean.CategoryBean;
 import bean.ItemBean;
-
+import bean.ItemBean2;
 /**
  * 商品関連のテーブルにアクセスするDAOクラス
  * @author tutor
@@ -191,6 +191,31 @@ public class ItemDAO {
 			}
 		}
 	}
+	public void addInfo(String info) throws DAOException{
+			ItemBean2 bean2 = new ItemBean2();
+			if (con == null)
+			getConnection();
+			PreparedStatement pstmt = null;
+		try {
+			String sql ="insert into item(info) = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, bean2.getInfo());
+			pstmt.executeUpdate();
+		}catch (SQLException e) {
+			e.printStackTrace();
+			throw new DAOException("レコードの取得に失敗しました。");
+		} finally {
+			try {
+
+				if (pstmt != null) pstmt.close();
+				this.close();
+			} catch (Exception e) {
+				throw new DAOException("リソースの解放に失敗しました。");
+			  }
+
+		  }
+	}
+
 
 
 }
