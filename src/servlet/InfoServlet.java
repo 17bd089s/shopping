@@ -8,7 +8,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+<<<<<<< HEAD
 import bean.ItemBean2;
+=======
+import bean.ItemBean;
+>>>>>>> refs/remotes/origin/main
 
 /**
  * Servlet implementation class InfoServlet
@@ -30,12 +34,52 @@ public class InfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		String action = request.getParameter("info1");
-		String info;
+		String action = request.getParameter("action");
+		String info1;
+		String info2;
+		String info3;
+		String info4;
+		String info5;
+		String info6;
+		String info7;
+		String info8;
+		String info9;
 
 		if(action.equals("info1")) {
-			info = request.getParameter("info1");
-			ItemBean2 bean = new ItemBean2(info);
+			info1 = request.getParameter("info1");
+			ItemBean bean = new ItemBean();
+
+		}else if(action.equals("info2")) {
+			info2 = request.getParameter("info2");
+			ItemBean bean2 = new ItemBean();
+
+		}else if(action.equals("info3")) {
+			info3 = request.getParameter("info3");
+			ItemBean bean2 = new ItemBean();
+
+		}else if(action.equals("info4")) {
+			info4 = request.getParameter("info4");
+			ItemBean bean = new ItemBean();
+
+		}else if(action.equals("info5")) {
+			info5 = request.getParameter("info5");
+			ItemBean bean = new ItemBean();
+
+		}else if(action.equals("info6")) {
+			info6 = request.getParameter("info6");
+			ItemBean bean = new ItemBean();
+
+		}else if(action.equals("info7")) {
+			info7 = request.getParameter("info7");
+			ItemBean bean = new ItemBean();
+
+		}else if(action.equals("info8")) {
+			info8 = request.getParameter("info8");
+			ItemBean bean = new ItemBean();
+
+		}else if(action.equals("info9")) {
+			info9 = request.getParameter("info9");
+			ItemBean bean = new ItemBean();
 
 		}
 	}
