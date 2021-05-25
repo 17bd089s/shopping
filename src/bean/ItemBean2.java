@@ -29,5 +29,4 @@ public class ItemBean2 {
 		this.info = info;
 	}
 
-
 }
