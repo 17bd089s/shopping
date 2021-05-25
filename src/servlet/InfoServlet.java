@@ -29,16 +29,7 @@ public class InfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		String info1 = request.getParameter("info1");
-		String info2 = request.getParameter("info2");
-		String info3 = request.getParameter("info3");
-		String info4 = request.getParameter("info4");
-		String info5 = request.getParameter("info5");
-		String info6 = request.getParameter("info6");
-		String info7 = request.getParameter("info7");
-		String info8 = request.getParameter("info8");
-		String info9 = request.getParameter("info9");
-		
+
 	}
 
 	/**

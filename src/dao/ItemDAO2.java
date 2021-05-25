@@ -126,7 +126,7 @@ public class ItemDAO2 {
 				int code = rs.getInt("code");
 				String name = rs.getString("name");
 				int price = rs.getInt("price");
-				ItemBean2 bean = new ItemBean2(code, name, price);
+				ItemBean2 bean = new ItemBean2(info);
 				list.add(bean);
 			}
 
@@ -172,7 +172,7 @@ public class ItemDAO2 {
 			if (rs.next()) {
 				String name = rs.getString("name");
 				int price = rs.getInt("price");
-				bean = new ItemBean2(code, name, price);
+				bean = new ItemBean2(info);
 			}
 
 			// 商品を返却
