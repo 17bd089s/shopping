@@ -62,7 +62,7 @@
 			<td colspan="8" style="text-align:right">総計：${cart.total}円</td>
 		</tr>
 	</table>
-	<form action="/shopping/OrderServlet?action=input_customer"" method="post">
+	<form action="/shopping/OrderServlet?action=input_customer" method="post">
 		<input type="submit" value="注文する" />
 	</form>
 	</c:if>
