@@ -191,15 +191,16 @@ public class ItemDAO {
 			}
 		}
 	}
-	public void addInfo(String info) throws DAOException{
+	public void addInfo(String info, int code) throws DAOException{
 			ItemBean2 bean2 = new ItemBean2();
 			if (con == null)
 			getConnection();
 			PreparedStatement pstmt = null;
 		try {
-			String sql ="insert into item(info) = ?";
+			String sql ="update item set info = ? where code = ?";
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, bean2.getInfo());
+			pstmt.setString(1, info);
+			pstmt.setInt(2, code);
 			pstmt.executeUpdate();
 		}catch (SQLException e) {
 			e.printStackTrace();
@@ -215,6 +216,7 @@ public class ItemDAO {
 
 		  }
 	}
+
 
 
 
