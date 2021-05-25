@@ -9,60 +9,28 @@ public class ItemBean2 {
 	/**
 	 * フィールド
 	 */
-	private int code;     // 商品番号
-	private String name;  // 商品名
-	private int price;    // 価格
+	private int code; // 商品番号
+	private String name; // 商品名
+	private int price; // 価格
 	private int quantity; // 数量
-	private String info;  //詳細情報
+	private String info; //詳細情報
 
-	/**
-	 * デフォルトコンストラクタ
-	 */
-	public ItemBean2() {
-
-	}
-
-	/**
-	 * コンストラクタ
-	 * @param code  商品番号
-	 * @param name  商品名
-	 * @param price 価格
-	 *
-	 */
-	public ItemBean2(int code, String name, int price) {
+	public ItemBean2(int code, String name, int price, int quantity, String info) {
+		super();
 		this.code = code;
 		this.name = name;
 		this.price = price;
-	}
-
-	/**
-	 * コンストラクタ
-	 * @param code     商品番号
-	 * @param name     商品名
-	 * @param price    価格
-	 * @param quantity 数量
-	 * @param info     詳細情報
-	 */
-	public ItemBean2(int code, String name, int price, int quantity, String info ) {
-		this(code, name, price);
 		this.quantity = quantity;
 		this.info = info;
 	}
 
-	/**
-	 * アクセサメソッド群
-	 */
+	public ItemBean2() {
+		super();
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
 
 	public int getCode() {
 		return code;
-	}
-
-	public String getInfo() {
-		return info;
-	}
-
-	public void setInfo(String info) {
-		this.info = info;
 	}
 
 	public void setCode(int code) {
@@ -92,4 +60,13 @@ public class ItemBean2 {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+
+	public String getInfo() {
+		return info;
+	}
+
+	public void setInfo(String info) {
+		this.info = info;
+	}
+
 }
