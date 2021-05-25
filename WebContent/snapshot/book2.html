@@ -6,10 +6,10 @@
 </head>
 <body>
 	<!-- メニュー -->
-	<a href="/shopping/snapshot/top.html">ようこそ|</a>
-	<a href="/shopping/snapshot/book.html">本|</a>
-	<a href="/shopping/snapshot/dvd.html">DVD|</a>
-	<a href="/shopping/snapshot/game.html">ゲーム|</a>
+	<a href="/shopping/snapshot/top2.html">ようこそ|</a>
+	<a href="/shopping/snapshot/book2.html">本|</a>
+	<a href="/shopping/snapshot/dvd2.html">DVD|</a>
+	<a href="/shopping/snapshot/game2.html">ゲーム|</a>
 
 	<h3>商品一覧</h3>
 	<form action="/shopping/InfoServlet" method="post">
@@ -17,6 +17,7 @@
 		商品名：javaの基礎<br />
 		価格（税込）：2500円<br />
 		<input type ="text" name="info1" />
+		<input type ="hidden" name="code" value="1"/>
 		<input type ="submit" value="登録" />
 	</form>
 	<form action="/shopping/InfoServlet" method="post">
@@ -24,6 +25,7 @@
 		商品名：MLB Funs<br />
 		価格（税込）：980円<br />
 		<input type ="text" name="info2" />
+		<input type ="hidden" name="code" value="2" />
 		<input type ="submit" value="登録" />
 	</form>
 	<form action="/shopping/InfoServlet" method="post">
@@ -31,6 +33,7 @@
 		商品名：料理BOOK!<br />
 		価格（税込）：1200円<br />
 		<input type ="text" name="info3" />
+		<input type ="hidden" name="code" value="3" />
 		<input type ="submit" value="登録" />
 	</form>
 </body>

@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bean.ItemBean;
+import bean.ItemBean2;
 
 /**
  * Servlet implementation class InfoServlet
@@ -31,52 +31,64 @@ public class InfoServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		String action = request.getParameter("action");
-		String info1;
-		String info2;
-		String info3;
-		String info4;
-		String info5;
-		String info6;
-		String info7;
-		String info8;
-		String info9;
+		String info;
+		int code;
 
 		if(action.equals("info1")) {
-			info1 = request.getParameter("info1");
-			ItemBean bean = new ItemBean();
+			info = request.getParameter("info1");
+			String strcode = request.getParameter("1");
+			code = Integer.parseInt(strcode);
+
+			ItemBean2 bean2 = new ItemBean2();
 
 		}else if(action.equals("info2")) {
-			info2 = request.getParameter("info2");
-			ItemBean bean2 = new ItemBean();
+			info = request.getParameter("info2");
+			String strcode = request.getParameter("2");
+			code = Integer.parseInt(strcode);
 
+			ItemBean2 bean2 = new ItemBean2();
 		}else if(action.equals("info3")) {
-			info3 = request.getParameter("info3");
-			ItemBean bean2 = new ItemBean();
+			info = request.getParameter("info3");
+			String strcode = request.getParameter("3");
+			code = Integer.parseInt(strcode);
 
+			ItemBean2 bean2 = new ItemBean2();
 		}else if(action.equals("info4")) {
-			info4 = request.getParameter("info4");
-			ItemBean bean = new ItemBean();
+			info = request.getParameter("info4");
+			String strcode = request.getParameter("4");
+			code = Integer.parseInt(strcode);
 
+			ItemBean2 bean2 = new ItemBean2();
 		}else if(action.equals("info5")) {
-			info5 = request.getParameter("info5");
-			ItemBean bean = new ItemBean();
+			info = request.getParameter("info5");
+			String strcode = request.getParameter("5");
+			code = Integer.parseInt(strcode);
 
+			ItemBean2 bean2 = new ItemBean2();
 		}else if(action.equals("info6")) {
-			info6 = request.getParameter("info6");
-			ItemBean bean = new ItemBean();
+			info = request.getParameter("info6");
+			String strcode = request.getParameter("6");
+			code = Integer.parseInt(strcode);
 
+			ItemBean2 bean2 = new ItemBean2();
 		}else if(action.equals("info7")) {
-			info7 = request.getParameter("info7");
-			ItemBean bean = new ItemBean();
+			info = request.getParameter("info7");
+			String strcode = request.getParameter("7");
+			code = Integer.parseInt(strcode);
 
+			ItemBean2 bean2 = new ItemBean2();
 		}else if(action.equals("info8")) {
-			info8 = request.getParameter("info8");
-			ItemBean bean = new ItemBean();
+			info = request.getParameter("info8");
+			String strcode = request.getParameter("8");
+			code = Integer.parseInt(strcode);
 
+			ItemBean2 bean2 = new ItemBean2();
 		}else if(action.equals("info9")) {
-			info9 = request.getParameter("info9");
-			ItemBean bean = new ItemBean();
+			info = request.getParameter("info9");
+			String strcode = request.getParameter("9");
+			code = Integer.parseInt(strcode);
 
+			ItemBean2 bean2 = new ItemBean2();
 		}
 	}
 
