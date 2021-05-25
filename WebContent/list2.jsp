@@ -17,9 +17,6 @@
 		商品番号：${item.code}<br />
 		商品名：${item.name}<br />
 		価格（税込）：${item.price}円<br />
-
-		<!-- 詳細情報を入力するコードを追加 -->
-
 		個数：
 		<select name="quantity">
 			<option value="1">1</option>
