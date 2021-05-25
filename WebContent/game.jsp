@@ -1,5 +1,4 @@
-<%@page import="bean.ItemBean"%>
-<%@page import="dao.ItemDAO"%>
+<%@page import="bean.ItemBean2"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -22,12 +21,14 @@
 	<form action="/shopping/snapshot/cart.html">
 
 	<%
-		ItemDAO dao = new ItemDAO();
-		ItemBean bean = new ItemBean();
+	ItemBean2  bean7 = new ItemBean2();
+	ItemBean2  bean8 = new ItemBean2();
+	ItemBean2  bean9 = new ItemBean2();
 	%>
 		商品番号：7<br />
 		商品名：パズルゲーム<br />
 		価格（税込）：780円<br />
+		詳細情報：<%= bean7.getInfo1() %>
 		個数：
 		<select name="quantity">
 			<option value="1">1</option>
@@ -42,6 +43,7 @@
 		商品番号：8<br />
 		商品名：Invader Fighter<br />
 		価格（税込）：3400円<br />
+		詳細情報：<%= bean8.getInfo1() %>
 		個数：
 		<select name="quantity">
 			<option value="1">1</option>
@@ -56,6 +58,7 @@
 		商品番号：9<br />
 		商品名：Play the BascketBall<br />
 		価格（税込）：2200円<br />
+		詳細情報：<%= bean9.getInfo1() %>
 		個数：
 		<select name="quantity">
 			<option value="1">1</option>
