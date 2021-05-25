@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import bean.ItemBean2;
+
 /**
  * Servlet implementation class InfoServlet
  */
@@ -28,6 +30,14 @@ public class InfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
+		String action = request.getParameter("info1");
+		String info;
+
+		if(action.equals("info1")) {
+			info = request.getParameter("info1");
+			ItemBean2 bean = new ItemBean2(info);
+
+		}
 	}
 
 	/**
