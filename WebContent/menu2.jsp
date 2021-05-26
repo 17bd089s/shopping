@@ -2,11 +2,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!-- メニュー -->
-<a href="/shopping/ShowItemServlet2?action=top">ようこそ</a>|
+
 
 <c:forEach items="${categories}" var="category">
-<a href="/shopping/ShowItemServlet?action=list&code=${category.code}">${category.name}</a>|
+<a href="/shopping/ShowItemServlet2?action=list2&code=${category.code}">${category.name}</a>|
 </c:forEach>
 
+
+<a href="/shopping/ShowItemServlet2?action=top">トップページへ</a>
 
 

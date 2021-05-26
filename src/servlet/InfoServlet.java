@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,12 +36,18 @@ public class InfoServlet extends HttpServlet {
 		String strcode = request.getParameter("code");
 		int code = Integer.parseInt(strcode);
 		String info;
+		response.setContentType("text/html;charset=utf-8");
+		PrintWriter out = response.getWriter();
 
 		if(code == 1) {
-			info = request.getParameter("info1");
+			info = request.getParameter("info");
 
 			ItemBean2 bean2 = new ItemBean2(info,code);
-
+			out.println("<html><head><title>  </title></head><body>");
+			out.println("<h1>登録完了</h1><br>");
+			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+			out.println("</body></html>");
 			try {
 				ItemDAO dao = new ItemDAO();
 				dao.addInfo(info, code);
@@ -50,10 +57,14 @@ public class InfoServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 		}else if(code == 2) {
-			info = request.getParameter("info2");
+			info = request.getParameter("info");
 
 			ItemBean2 bean2 = new ItemBean2(info,code);
-
+			out.println("<html><head><title>  </title></head><body>");
+			out.println("<h1>登録完了</h1><br>");
+			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+			out.println("</body></html>");
 			try {
 				ItemDAO dao = new ItemDAO();
 				dao.addInfo(info, code);
@@ -65,10 +76,14 @@ public class InfoServlet extends HttpServlet {
 
 
 		}else if(code == 3) {
-			info = request.getParameter("info3");
+			info = request.getParameter("info");
 
 			ItemBean2 bean2 = new ItemBean2(info,code);
-
+			out.println("<html><head><title>  </title></head><body>");
+			out.println("<h1>登録完了</h1><br>");
+			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+			out.println("</body></html>");
 			try {
 				ItemDAO dao = new ItemDAO();
 				dao.addInfo(info, code);
@@ -78,10 +93,14 @@ public class InfoServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 		}else if(code == 4) {
-			info = request.getParameter("info4");
+			info = request.getParameter("info");
 
 			ItemBean2 bean2 = new ItemBean2(info,code);
-
+			out.println("<html><head><title>  </title></head><body>");
+			out.println("<h1>登録完了</h1><br>");
+			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+			out.println("</body></html>");
 			try {
 				ItemDAO dao = new ItemDAO();
 				dao.addInfo(info, code);
@@ -92,10 +111,14 @@ public class InfoServlet extends HttpServlet {
 			}
 
 		}else if(code == 5) {
-			info = request.getParameter("info5");
+			info = request.getParameter("info");
 
 			ItemBean2 bean2 = new ItemBean2(info,code);
-
+			out.println("<html><head><title>  </title></head><body>");
+			out.println("<h1>登録完了</h1><br>");
+			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+			out.println("</body></html>");
 			try {
 				ItemDAO dao = new ItemDAO();
 				dao.addInfo(info, code);
@@ -106,9 +129,14 @@ public class InfoServlet extends HttpServlet {
 			}
 
 		}else if(code == 6) {
-			info = request.getParameter("info6");
+			info = request.getParameter("info");
 
 			ItemBean2 bean2 = new ItemBean2(info,code);
+			out.println("<html><head><title>  </title></head><body>");
+			out.println("<h1>登録完了</h1><br>");
+			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+			out.println("</body></html>");
 			try {
 				ItemDAO dao = new ItemDAO();
 				dao.addInfo(info, code);
@@ -119,9 +147,14 @@ public class InfoServlet extends HttpServlet {
 			}
 
 		}else if(code == 7) {
-			info = request.getParameter("info7");
+			info = request.getParameter("info");
 
 			ItemBean2 bean2 = new ItemBean2(info,code);
+			out.println("<html><head><title>  </title></head><body>");
+			out.println("<h1>登録完了</h1><br>");
+			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+			out.println("</body></html>");
 			try {
 				ItemDAO dao = new ItemDAO();
 				dao.addInfo(info, code);
@@ -131,9 +164,14 @@ public class InfoServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 		}else if(code == 8) {
-			info = request.getParameter("info8");
+			info = request.getParameter("info");
 
 			ItemBean2 bean2 = new ItemBean2(info,code);
+			out.println("<html><head><title>  </title></head><body>");
+			out.println("<h1>登録完了</h1><br>");
+			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+			out.println("</body></html>");
 			try {
 				ItemDAO dao = new ItemDAO();
 				dao.addInfo(info, code);
@@ -143,9 +181,14 @@ public class InfoServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 		}else if(code == 9) {
-			info = request.getParameter("info9");
+			info = request.getParameter("info");
 
 			ItemBean2 bean2 = new ItemBean2(info,code);
+			out.println("<html><head><title>  </title></head><body>");
+			out.println("<h1>登録完了</h1><br>");
+			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+			out.println("</body></html>");
 			try {
 				ItemDAO dao = new ItemDAO();
 				dao.addInfo(info, code);

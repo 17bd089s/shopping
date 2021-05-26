@@ -9,7 +9,7 @@
 </head>
 <body>
 	<!-- メニュー -->
-	<jsp:include page="/menu.jsp" />
+	<jsp:include page="/menu2.jsp" />
 
 	<h3>商品一覧</h3>
 	<c:forEach items="${items}" var="item">
@@ -17,9 +17,10 @@
 		商品番号：${item.code}<br />
 		商品名：${item.name}<br />
 		価格（税込）：${item.price}円<br />
+		詳細情報：${item.info}<br />
 		<input type ="text" name="info" />
-		<input type="hidden" name="item_code" value="${item.code}" />
-		<input type ="submit" value="登録" />
+		<input type="hidden" name="code" value="${item.code}" />
+		<input type ="submit" value="編集" />
 
 	</form>
 	</c:forEach>

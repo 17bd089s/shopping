@@ -8,7 +8,7 @@
 </head>
 <body>
 	<!-- メニュー -->
-	<jsp:include page="/menu.jsp" />
+	<jsp:include page="/menu2.jsp" />
 
 	<h3>ようこそ！サンプルショッピングサイト管理者画面へ</h3>
 
