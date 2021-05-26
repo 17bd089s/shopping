@@ -19,6 +19,7 @@
 		価格（税込）：${item.price}円<br />
 
 		<!-- 詳細情報を入力するコードを追加 -->
+		詳細情報：${item.info}<br />
 
 		個数：
 		<select name="quantity">
