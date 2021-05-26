@@ -33,21 +33,21 @@ public class InfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		String name = request.getParameter("name");
+		String action = request.getParameter("action");
 		String strcode = request.getParameter("code");
 		int code = Integer.parseInt(strcode);
 		String info;
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
 
-		if(name.equals("edit")) {
+		if(action.equals("edit")) {
 
 			if(code == 1) {
 				info = request.getParameter("info");
 
 				ItemBean2 bean2 = new ItemBean2(info,code);
 				out.println("<html><head><title>  </title></head><body>");
-				out.println("<h1>削除完了</h1><br>");
+				out.println("<h1>登録完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
 				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
 				out.println("</body></html>");
@@ -64,7 +64,7 @@ public class InfoServlet extends HttpServlet {
 
 				ItemBean2 bean2 = new ItemBean2(info,code);
 				out.println("<html><head><title>  </title></head><body>");
-				out.println("<h1>削除完了</h1><br>");
+				out.println("<h1>登録完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
 				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
 				out.println("</body></html>");
@@ -83,7 +83,7 @@ public class InfoServlet extends HttpServlet {
 
 				ItemBean2 bean2 = new ItemBean2(info,code);
 				out.println("<html><head><title>  </title></head><body>");
-				out.println("<h1>削除完了</h1><br>");
+				out.println("<h1>登録完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
 				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
 				out.println("</body></html>");
@@ -100,7 +100,7 @@ public class InfoServlet extends HttpServlet {
 
 				ItemBean2 bean2 = new ItemBean2(info,code);
 				out.println("<html><head><title>  </title></head><body>");
-				out.println("<h1>削除完了</h1><br>");
+				out.println("<h1>登録完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
 				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
 				out.println("</body></html>");
@@ -118,7 +118,7 @@ public class InfoServlet extends HttpServlet {
 
 				ItemBean2 bean2 = new ItemBean2(info,code);
 				out.println("<html><head><title>  </title></head><body>");
-				out.println("<h1>削除完了</h1><br>");
+				out.println("<h1>登録完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
 				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
 				out.println("</body></html>");
@@ -136,7 +136,7 @@ public class InfoServlet extends HttpServlet {
 
 				ItemBean2 bean2 = new ItemBean2(info,code);
 				out.println("<html><head><title>  </title></head><body>");
-				out.println("<h1>削除完了</h1><br>");
+				out.println("<h1>登録完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
 				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
 				out.println("</body></html>");
@@ -154,7 +154,7 @@ public class InfoServlet extends HttpServlet {
 
 				ItemBean2 bean2 = new ItemBean2(info,code);
 				out.println("<html><head><title>  </title></head><body>");
-				out.println("<h1>削除完了</h1><br>");
+				out.println("<h1>登録完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
 				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
 				out.println("</body></html>");
@@ -171,7 +171,7 @@ public class InfoServlet extends HttpServlet {
 
 				ItemBean2 bean2 = new ItemBean2(info,code);
 				out.println("<html><head><title>  </title></head><body>");
-				out.println("<h1>削除完了</h1><br>");
+				out.println("<h1>登録完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
 				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
 				out.println("</body></html>");
@@ -188,7 +188,7 @@ public class InfoServlet extends HttpServlet {
 
 				ItemBean2 bean2 = new ItemBean2(info,code);
 				out.println("<html><head><title>  </title></head><body>");
-				out.println("<h1>削除完了</h1><br>");
+				out.println("<h1>登録完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
 				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
 				out.println("</body></html>");
@@ -201,7 +201,7 @@ public class InfoServlet extends HttpServlet {
 					e.printStackTrace();
 				}
 			}
-		}else if(name.equals("delete")) {
+		}else if(action.equals("del")) {
 			if(code == 1) {
 				out.println("<html><head><title>  </title></head><body>");
 				out.println("<h1>削除完了</h1><br>");

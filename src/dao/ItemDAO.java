@@ -219,7 +219,7 @@ public class ItemDAO {
 		  }
 	}
 
-	public void delInfo(String info, int code) throws DAOException{
+	public void delInfo(int code) throws DAOException{
 		ItemBean2 bean2 = new ItemBean2();
 		if (con == null)
 		getConnection();
