@@ -219,8 +219,10 @@ public class ItemDAO {
 		  }
 	}
 
-	public void delInfo(String info, int code) throws DAOException{
-		//ItemBean2 bean2 = new ItemBean2();
+
+	public void delInfo(int code) throws DAOException{
+		ItemBean2 bean2 = new ItemBean2();
+
 		if (con == null)
 		getConnection();
 		PreparedStatement pstmt = null;
