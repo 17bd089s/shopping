@@ -33,170 +33,308 @@ public class InfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
+		String name = request.getParameter("name");
 		String strcode = request.getParameter("code");
 		int code = Integer.parseInt(strcode);
 		String info;
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
 
-		if(code == 1) {
-			info = request.getParameter("info");
+		if(name.equals("edit")) {
 
-			ItemBean2 bean2 = new ItemBean2(info,code);
-			out.println("<html><head><title>  </title></head><body>");
-			out.println("<h1>登録完了</h1><br>");
-			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
-			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
-			out.println("</body></html>");
-			try {
-				ItemDAO dao = new ItemDAO();
-				dao.addInfo(info, code);
+			if(code == 1) {
+				info = request.getParameter("info");
 
-			} catch (DAOException e) {
-				// TODO 自動生成された catch ブロック
-				e.printStackTrace();
+				ItemBean2 bean2 = new ItemBean2(info,code);
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.addInfo(info,code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+			}else if(code == 2) {
+				info = request.getParameter("info");
+
+				ItemBean2 bean2 = new ItemBean2(info,code);
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.addInfo(info,code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+
+
+			}else if(code == 3) {
+				info = request.getParameter("info");
+
+				ItemBean2 bean2 = new ItemBean2(info,code);
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.addInfo(info,code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+			}else if(code == 4) {
+				info = request.getParameter("info");
+
+				ItemBean2 bean2 = new ItemBean2(info,code);
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.addInfo(info,code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+
+			}else if(code == 5) {
+				info = request.getParameter("info");
+
+				ItemBean2 bean2 = new ItemBean2(info,code);
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.addInfo(info,code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+
+			}else if(code == 6) {
+				info = request.getParameter("info");
+
+				ItemBean2 bean2 = new ItemBean2(info,code);
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.addInfo(info,code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+
+			}else if(code == 7) {
+				info = request.getParameter("info");
+
+				ItemBean2 bean2 = new ItemBean2(info,code);
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.addInfo(info,code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+			}else if(code == 8) {
+				info = request.getParameter("info");
+
+				ItemBean2 bean2 = new ItemBean2(info,code);
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.addInfo(info,code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+			}else if(code == 9) {
+				info = request.getParameter("info");
+
+				ItemBean2 bean2 = new ItemBean2(info,code);
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.addInfo(info,code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
 			}
-		}else if(code == 2) {
-			info = request.getParameter("info");
+		}else if(name.equals("delete")) {
+			if(code == 1) {
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.delInfo(code);
 
-			ItemBean2 bean2 = new ItemBean2(info,code);
-			out.println("<html><head><title>  </title></head><body>");
-			out.println("<h1>登録完了</h1><br>");
-			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
-			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
-			out.println("</body></html>");
-			try {
-				ItemDAO dao = new ItemDAO();
-				dao.addInfo(info, code);
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+			}else if(code == 2) {
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.delInfo(code);
 
-			} catch (DAOException e) {
-				// TODO 自動生成された catch ブロック
-				e.printStackTrace();
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+
+
+			}else if(code == 3) {
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.delInfo(code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+			}else if(code == 4) {
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.delInfo(code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+
+			}else if(code == 5) {
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.delInfo(code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+
+			}else if(code == 6) {
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.delInfo(code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+
+			}else if(code == 7) {
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.delInfo(code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+			}else if(code == 8) {
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.delInfo(code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+			}else if(code == 9) {
+				out.println("<html><head><title>  </title></head><body>");
+				out.println("<h1>削除完了</h1><br>");
+				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("</body></html>");
+				try {
+					ItemDAO dao = new ItemDAO();
+					dao.delInfo(code);
+
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
 			}
 
-
-		}else if(code == 3) {
-			info = request.getParameter("info");
-
-			ItemBean2 bean2 = new ItemBean2(info,code);
-			out.println("<html><head><title>  </title></head><body>");
-			out.println("<h1>登録完了</h1><br>");
-			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
-			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
-			out.println("</body></html>");
-			try {
-				ItemDAO dao = new ItemDAO();
-				dao.addInfo(info, code);
-
-			} catch (DAOException e) {
-				// TODO 自動生成された catch ブロック
-				e.printStackTrace();
-			}
-		}else if(code == 4) {
-			info = request.getParameter("info");
-
-			ItemBean2 bean2 = new ItemBean2(info,code);
-			out.println("<html><head><title>  </title></head><body>");
-			out.println("<h1>登録完了</h1><br>");
-			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
-			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
-			out.println("</body></html>");
-			try {
-				ItemDAO dao = new ItemDAO();
-				dao.addInfo(info, code);
-
-			} catch (DAOException e) {
-				// TODO 自動生成された catch ブロック
-				e.printStackTrace();
-			}
-
-		}else if(code == 5) {
-			info = request.getParameter("info");
-
-			ItemBean2 bean2 = new ItemBean2(info,code);
-			out.println("<html><head><title>  </title></head><body>");
-			out.println("<h1>登録完了</h1><br>");
-			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
-			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
-			out.println("</body></html>");
-			try {
-				ItemDAO dao = new ItemDAO();
-				dao.addInfo(info, code);
-
-			} catch (DAOException e) {
-				// TODO 自動生成された catch ブロック
-				e.printStackTrace();
-			}
-
-		}else if(code == 6) {
-			info = request.getParameter("info");
-
-			ItemBean2 bean2 = new ItemBean2(info,code);
-			out.println("<html><head><title>  </title></head><body>");
-			out.println("<h1>登録完了</h1><br>");
-			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
-			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
-			out.println("</body></html>");
-			try {
-				ItemDAO dao = new ItemDAO();
-				dao.addInfo(info, code);
-
-			} catch (DAOException e) {
-				// TODO 自動生成された catch ブロック
-				e.printStackTrace();
-			}
-
-		}else if(code == 7) {
-			info = request.getParameter("info");
-
-			ItemBean2 bean2 = new ItemBean2(info,code);
-			out.println("<html><head><title>  </title></head><body>");
-			out.println("<h1>登録完了</h1><br>");
-			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
-			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
-			out.println("</body></html>");
-			try {
-				ItemDAO dao = new ItemDAO();
-				dao.addInfo(info, code);
-
-			} catch (DAOException e) {
-				// TODO 自動生成された catch ブロック
-				e.printStackTrace();
-			}
-		}else if(code == 8) {
-			info = request.getParameter("info");
-
-			ItemBean2 bean2 = new ItemBean2(info,code);
-			out.println("<html><head><title>  </title></head><body>");
-			out.println("<h1>登録完了</h1><br>");
-			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
-			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
-			out.println("</body></html>");
-			try {
-				ItemDAO dao = new ItemDAO();
-				dao.addInfo(info, code);
-
-			} catch (DAOException e) {
-				// TODO 自動生成された catch ブロック
-				e.printStackTrace();
-			}
-		}else if(code == 9) {
-			info = request.getParameter("info");
-
-			ItemBean2 bean2 = new ItemBean2(info,code);
-			out.println("<html><head><title>  </title></head><body>");
-			out.println("<h1>登録完了</h1><br>");
-			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
-			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
-			out.println("</body></html>");
-			try {
-				ItemDAO dao = new ItemDAO();
-				dao.addInfo(info, code);
-
-			} catch (DAOException e) {
-				// TODO 自動生成された catch ブロック
-				e.printStackTrace();
-			}
 		}
 	}
 
