@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import bean.ItemBean2;
+import dao.DAOException;
+import dao.ItemDAO;
 
 /**
  * Servlet implementation class InfoServlet
@@ -30,65 +32,128 @@ public class InfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		String action = request.getParameter("action");
+		String strcode = request.getParameter("code");
+		int code = Integer.parseInt(strcode);
 		String info;
-		int code;
 
-		if(action.equals("info1")) {
+		if(code == 1) {
 			info = request.getParameter("info1");
-			String strcode = request.getParameter("1");
-			code = Integer.parseInt(strcode);
 
-			ItemBean2 bean2 = new ItemBean2();
+			ItemBean2 bean2 = new ItemBean2(info,code);
 
-		}else if(action.equals("info2")) {
+			try {
+				ItemDAO dao = new ItemDAO();
+				dao.addInfo(info, code);
+
+			} catch (DAOException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+		}else if(code == 2) {
 			info = request.getParameter("info2");
-			String strcode = request.getParameter("2");
-			code = Integer.parseInt(strcode);
 
-			ItemBean2 bean2 = new ItemBean2();
-		}else if(action.equals("info3")) {
+			ItemBean2 bean2 = new ItemBean2(info,code);
+
+			try {
+				ItemDAO dao = new ItemDAO();
+				dao.addInfo(info, code);
+
+			} catch (DAOException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+
+
+		}else if(code == 3) {
 			info = request.getParameter("info3");
-			String strcode = request.getParameter("3");
-			code = Integer.parseInt(strcode);
 
-			ItemBean2 bean2 = new ItemBean2();
-		}else if(action.equals("info4")) {
+			ItemBean2 bean2 = new ItemBean2(info,code);
+
+			try {
+				ItemDAO dao = new ItemDAO();
+				dao.addInfo(info, code);
+
+			} catch (DAOException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+		}else if(code == 4) {
 			info = request.getParameter("info4");
-			String strcode = request.getParameter("4");
-			code = Integer.parseInt(strcode);
 
-			ItemBean2 bean2 = new ItemBean2();
-		}else if(action.equals("info5")) {
+			ItemBean2 bean2 = new ItemBean2(info,code);
+
+			try {
+				ItemDAO dao = new ItemDAO();
+				dao.addInfo(info, code);
+
+			} catch (DAOException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+
+		}else if(code == 5) {
 			info = request.getParameter("info5");
-			String strcode = request.getParameter("5");
-			code = Integer.parseInt(strcode);
 
-			ItemBean2 bean2 = new ItemBean2();
-		}else if(action.equals("info6")) {
+			ItemBean2 bean2 = new ItemBean2(info,code);
+
+			try {
+				ItemDAO dao = new ItemDAO();
+				dao.addInfo(info, code);
+
+			} catch (DAOException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+
+		}else if(code == 6) {
 			info = request.getParameter("info6");
-			String strcode = request.getParameter("6");
-			code = Integer.parseInt(strcode);
 
-			ItemBean2 bean2 = new ItemBean2();
-		}else if(action.equals("info7")) {
+			ItemBean2 bean2 = new ItemBean2(info,code);
+			try {
+				ItemDAO dao = new ItemDAO();
+				dao.addInfo(info, code);
+
+			} catch (DAOException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+
+		}else if(code == 7) {
 			info = request.getParameter("info7");
-			String strcode = request.getParameter("7");
-			code = Integer.parseInt(strcode);
 
-			ItemBean2 bean2 = new ItemBean2();
-		}else if(action.equals("info8")) {
+			ItemBean2 bean2 = new ItemBean2(info,code);
+			try {
+				ItemDAO dao = new ItemDAO();
+				dao.addInfo(info, code);
+
+			} catch (DAOException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+		}else if(code == 8) {
 			info = request.getParameter("info8");
-			String strcode = request.getParameter("8");
-			code = Integer.parseInt(strcode);
 
-			ItemBean2 bean2 = new ItemBean2();
-		}else if(action.equals("info9")) {
+			ItemBean2 bean2 = new ItemBean2(info,code);
+			try {
+				ItemDAO dao = new ItemDAO();
+				dao.addInfo(info, code);
+
+			} catch (DAOException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+		}else if(code == 9) {
 			info = request.getParameter("info9");
-			String strcode = request.getParameter("9");
-			code = Integer.parseInt(strcode);
 
-			ItemBean2 bean2 = new ItemBean2();
+			ItemBean2 bean2 = new ItemBean2(info,code);
+			try {
+				ItemDAO dao = new ItemDAO();
+				dao.addInfo(info, code);
+
+			} catch (DAOException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
 		}
 	}
 

@@ -114,7 +114,7 @@ public class ItemDAO {
 		ResultSet rs = null;
 
 		try {
-			String sql = "select * from item where category_code = ?";
+			String sql = "select * from item where category_code = ? order by code";
 			pstmt = this.con.prepareStatement(sql);
 			// プレースホルダを設定
 			pstmt.setInt(1, categoryCode);
@@ -126,7 +126,9 @@ public class ItemDAO {
 				int code = rs.getInt("code");
 				String name = rs.getString("name");
 				int price = rs.getInt("price");
-				ItemBean bean = new ItemBean(code, name, price);
+				String info = rs.getString("info");
+				// info
+				ItemBean bean = new ItemBean(code, name, price, info);
 				list.add(bean);
 			}
 

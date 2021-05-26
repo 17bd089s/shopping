@@ -13,6 +13,9 @@ public class ItemBean {
 	private String name;  // 商品名
 	private int price;    // 価格
 	private int quantity; // 数量
+	private String info;
+
+
 
 	/**
 	 * デフォルトコンストラクタ
@@ -31,7 +34,20 @@ public class ItemBean {
 		this.code = code;
 		this.name = name;
 		this.price = price;
+
+		//詳細情報
+
 	}
+
+	public ItemBean(int code, String name, int price, String info) {
+		this.code = code;
+		this.name = name;
+		this.price = price;
+		this.info = info;
+		//詳細情報
+
+	}
+
 
 	/**
 	 * コンストラクタ
@@ -80,4 +96,13 @@ public class ItemBean {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+
+	public String getInfo() {
+		return info;
+	}
+
+	public void setInfo(String info) {
+		this.info = info;
+	}
+
 }
