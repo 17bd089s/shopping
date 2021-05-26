@@ -1708,8 +1708,8 @@
       <constraint>
         <height>-1</height>
         <width>-1</width>
-        <x>367</x>
-        <y>320</y>
+        <x>346</x>
+        <y>324</y>
       </constraint>
       <sourceConnections>
         <net.java.amateras.uml.classdiagram.model.AssociationModel reference="../../parent/children/net.java.amateras.uml.classdiagram.model.ClassModel[2]/sourceConnections/net.java.amateras.uml.classdiagram.model.AssociationModel/target/targetConnections/net.java.amateras.uml.classdiagram.model.AssociationModel"/>

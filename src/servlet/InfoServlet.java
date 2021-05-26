@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bean.ItemBean2;
 import dao.DAOException;
 import dao.ItemDAO;
 
@@ -42,7 +41,7 @@ public class InfoServlet extends HttpServlet {
 		if(code == 1) {
 			info = request.getParameter("info");
 
-			ItemBean2 bean2 = new ItemBean2(info,code);
+			//ItemBean2 bean2 = new ItemBean2(info,code);
 			out.println("<html><head><title>  </title></head><body>");
 			out.println("<h1>登録完了</h1><br>");
 			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
@@ -59,7 +58,7 @@ public class InfoServlet extends HttpServlet {
 		}else if(code == 2) {
 			info = request.getParameter("info");
 
-			ItemBean2 bean2 = new ItemBean2(info,code);
+			//ItemBean2 bean2 = new ItemBean2(info,code);
 			out.println("<html><head><title>  </title></head><body>");
 			out.println("<h1>登録完了</h1><br>");
 			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
@@ -78,7 +77,7 @@ public class InfoServlet extends HttpServlet {
 		}else if(code == 3) {
 			info = request.getParameter("info");
 
-			ItemBean2 bean2 = new ItemBean2(info,code);
+			//ItemBean2 bean2 = new ItemBean2(info,code);
 			out.println("<html><head><title>  </title></head><body>");
 			out.println("<h1>登録完了</h1><br>");
 			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
@@ -95,7 +94,7 @@ public class InfoServlet extends HttpServlet {
 		}else if(code == 4) {
 			info = request.getParameter("info");
 
-			ItemBean2 bean2 = new ItemBean2(info,code);
+			//ItemBean2 bean2 = new ItemBean2(info,code);
 			out.println("<html><head><title>  </title></head><body>");
 			out.println("<h1>登録完了</h1><br>");
 			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
@@ -113,7 +112,7 @@ public class InfoServlet extends HttpServlet {
 		}else if(code == 5) {
 			info = request.getParameter("info");
 
-			ItemBean2 bean2 = new ItemBean2(info,code);
+			//ItemBean2 bean2 = new ItemBean2(info,code);
 			out.println("<html><head><title>  </title></head><body>");
 			out.println("<h1>登録完了</h1><br>");
 			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
@@ -131,7 +130,7 @@ public class InfoServlet extends HttpServlet {
 		}else if(code == 6) {
 			info = request.getParameter("info");
 
-			ItemBean2 bean2 = new ItemBean2(info,code);
+			//ItemBean2 bean2 = new ItemBean2(info,code);
 			out.println("<html><head><title>  </title></head><body>");
 			out.println("<h1>登録完了</h1><br>");
 			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
@@ -149,7 +148,7 @@ public class InfoServlet extends HttpServlet {
 		}else if(code == 7) {
 			info = request.getParameter("info");
 
-			ItemBean2 bean2 = new ItemBean2(info,code);
+			//ItemBean2 bean2 = new ItemBean2(info,code);
 			out.println("<html><head><title>  </title></head><body>");
 			out.println("<h1>登録完了</h1><br>");
 			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
@@ -166,7 +165,7 @@ public class InfoServlet extends HttpServlet {
 		}else if(code == 8) {
 			info = request.getParameter("info");
 
-			ItemBean2 bean2 = new ItemBean2(info,code);
+			//ItemBean2 bean2 = new ItemBean2(info,code);
 			out.println("<html><head><title>  </title></head><body>");
 			out.println("<h1>登録完了</h1><br>");
 			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
@@ -183,7 +182,7 @@ public class InfoServlet extends HttpServlet {
 		}else if(code == 9) {
 			info = request.getParameter("info");
 
-			ItemBean2 bean2 = new ItemBean2(info,code);
+			//ItemBean2 bean2 = new ItemBean2(info,code);
 			out.println("<html><head><title>  </title></head><body>");
 			out.println("<h1>登録完了</h1><br>");
 			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
