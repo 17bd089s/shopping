@@ -20,7 +20,8 @@
 		詳細情報：${item.info}<br />
 		<input type ="text" name="info" />
 		<input type="hidden" name="code" value="${item.code}" />
-		<input type ="submit" value="編集" />
+		<input type ="submit" name="edit" value="編集" />
+		<input type ="submit"  name="delete" value="削除" />
 
 	</form>
 	</c:forEach>

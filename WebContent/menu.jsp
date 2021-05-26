@@ -9,5 +9,5 @@
 </c:forEach>
 
 <a href="/shopping/CartServlet?action=show">カートを見る</a>
-<a href="/shopping/menu2.jsp">管理者画面へ</a>|
+<a href="/shopping/login.jsp">管理者画面へ</a>|
 

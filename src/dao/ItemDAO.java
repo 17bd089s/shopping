@@ -219,6 +219,31 @@ public class ItemDAO {
 		  }
 	}
 
+	public void delInfo(String info, int code) throws DAOException{
+		ItemBean2 bean2 = new ItemBean2();
+		if (con == null)
+		getConnection();
+		PreparedStatement pstmt = null;
+	try {
+		String sql ="update item set info = '' where code = ?";
+		pstmt = con.prepareStatement(sql);
+		pstmt.setInt(1, code);
+		pstmt.executeUpdate();
+	}catch (SQLException e) {
+		e.printStackTrace();
+		throw new DAOException("レコードの取得に失敗しました。");
+	} finally {
+		try {
+
+			if (pstmt != null) pstmt.close();
+			this.close();
+		} catch (Exception e) {
+			throw new DAOException("リソースの解放に失敗しました。");
+		  }
+
+	  }
+}
+
 
 
 
