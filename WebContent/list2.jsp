@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Welcome shopping!</title>
 </head>
-<body>
+<body class="list2-body">
 	<!-- メニュー -->
 	<jsp:include page="/menu2.jsp" />
 
