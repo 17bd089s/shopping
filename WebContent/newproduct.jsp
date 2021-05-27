@@ -22,7 +22,7 @@
 		</select><br />
 		価格（税込）：<input type ="text" name="price" /><br />
 		詳細情報：	<input type ="text" name="info" /><br />
-		<input type ="submit" value="新規登録" />
+		<input type ="submit" value="新規登録" class="botan">
 	</form>
 
 	<%--

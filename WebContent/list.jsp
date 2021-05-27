@@ -30,7 +30,7 @@
 			<option value="5">5</option>
 		</select>個<br/>
 		<input type="hidden" name="item_code" value="${item.code}" />
-		<input type="submit" value="カートに追加" />
+		<input type="submit" value="カートに追加" class="botan">
 	</form><br>
 	</c:forEach>
 </body>

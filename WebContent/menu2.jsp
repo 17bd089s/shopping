@@ -6,8 +6,8 @@
 
 <h1>管理者画面</h1>
 
-<div class="category2">
 <p>変更したい項目を選択してください</p>
+<div class="category2">
 <c:forEach items="${categories}" var="category">
 <a href="/shopping/ShowItemServlet2?action=list2&code=${category.code}">${category.name}</a>　　
 </c:forEach>
