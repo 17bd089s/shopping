@@ -13,6 +13,24 @@
 
 	<h3>商品一覧</h3>
 	<c:forEach items="${items}" var="item">
+	<form action="/shopping/InfoServlet?action=del" method="post">
+		商品番号：${item.code}<br />
+		商品名：${item.name}<br />
+		価格（税込）：${item.price}円<br />
+		詳細情報：${item.info}
+		<input type="hidden" name="code" value="${item.code}" />
+		<input type ="submit" value="削除" />
+	</form>
+
+	<form action="/shopping/InfoServlet?action=edit" method="post">
+		<input type ="text" name="info" />
+		<input type="hidden" name="code" value="${item.code}" />
+		<input type ="submit"  value="編集" />
+	</form><br>
+	</c:forEach>
+
+	<%--
+	<c:forEach items="${items}" var="item">
 	<form action="/shopping/InfoServlet?action=edit" method="post">
 		商品番号：${item.code}<br />
 		商品名：${item.name}<br />
@@ -26,7 +44,10 @@
 	<form action="/shopping/InfoServlet?action=del" method="post">
 		<input type="hidden" name="code" value="${item.code}" />
 		<input type ="submit"  value="削除" />
-	</form>
+	</form><input type ="text" name="info" />
+		<input type="hidden" name="code" value="${item.code}" />
+		<input type ="submit" value="編集" />
 	</c:forEach>
+	--%>
 </body>
 </html>

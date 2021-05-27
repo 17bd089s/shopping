@@ -9,6 +9,6 @@
 </c:forEach>
 
 
-<a href="/shopping/ShowItemServlet2?action=top">トップページへ</a>
+<a href="/shopping/ShowItemServlet2?action=top">ログアウト</a>
 
 
