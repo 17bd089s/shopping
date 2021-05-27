@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -36,9 +37,11 @@ public class CartServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// パラメータの解析：actionキーを取得して処理を分岐
 		String action = request.getParameter("action");
+
 		// actionキーが「show」またはパラメータがない場合はカート画面に遷移
 		if (action == null || action.length() == 0 || action.equals("show")) {
 			this.gotoPage(request, response, "cart.jsp");
+
 
 		// actionキーが「add」の場合：カート内商品リストに商品を追加してカート画面に遷移（自画面遷移）
 		} else if (action.equals("add")) {
@@ -139,33 +142,53 @@ public class CartServlet extends HttpServlet {
 				//商品を減らす処理
 		else if (action.equals("mainus")) {
 
+			String itemCode = request.getParameter("item_code");
+			int code = Integer.parseInt(itemCode);
+			HttpSession session = request.getSession(false);
+			CartBean cart = (CartBean) session.getAttribute("cart");
+			Map<Integer, ItemBean> itemMap = cart.getItems();
+			ItemBean bean2 = itemMap.get(code);
+			int quantity =  bean2.getQuantity();
 
-			try {
-				// リクエストパラメータを取得
-				String itemCode = request.getParameter("item_code");
-				int code = Integer.parseInt(itemCode);
+			if (quantity >= 1) {
+				try {
+					// リクエストパラメータを取得
+					/*
+					String itemCode = request.getParameter("item_code");
+					int code = Integer.parseInt(itemCode);
+
+					// セッションからカートを取得
+					HttpSession session = request.getSession();
+					CartBean cart = (CartBean) session.getAttribute("cart");
+					*/
+					// 取得したカートがnullの場合：初めて商品をカートに追加
+					if (cart == null) {
+						cart = new CartBean();
+						session.setAttribute("cart", cart);
+					}
+					// 商品個番号の商品を取得
+					ItemDAO dao = new ItemDAO();
+					ItemBean bean = dao.findByPrimariKey(code);
 
 
-				// セッションからカートを取得
-				HttpSession session = request.getSession();
-				CartBean cart = (CartBean) session.getAttribute("cart");
-				// 取得したカートがnullの場合：初めて商品をカートに追加
-				if (cart == null) {
-					cart = new CartBean();
-					session.setAttribute("cart", cart);
+					// カートに追加する
+					cart.addCart(bean, -1);
+					// 自画面遷移
+					this.gotoPage(request, response, "cart.jsp");
+				} catch (DAOException e) {
+					e.printStackTrace();
+					request.setAttribute("message", "内部エラーが発生しました。");
+					gotoPage(request, response, "errInternal.jsp");
 				}
-				// 商品個番号の商品を取得
-				ItemDAO dao = new ItemDAO();
-				ItemBean bean = dao.findByPrimariKey(code);
-				// カートから１つ商品を減らす
-				cart.addCart(bean, -1);
-				// 自画面遷移
+
+
+			}else {
+				quantity = 0;
+
 				this.gotoPage(request, response, "cart.jsp");
-			} catch (DAOException e) {
-				e.printStackTrace();
-				request.setAttribute("message", "内部エラーが発生しました。");
-				gotoPage(request, response, "errInternal.jsp");
 			}
+
+
 		}
 
 	}

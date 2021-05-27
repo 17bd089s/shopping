@@ -11,23 +11,18 @@
 	<!-- メニュー -->
 	<jsp:include page="/menu2.jsp" />
 
-	<h3>商品一覧</h3>
-	<c:forEach items="${items}" var="item">
-	<form action="/shopping/InfoServlet?action=del" method="post">
-		商品番号：${item.code}<br />
-		商品名：${item.name}<br />
-		価格（税込）：${item.price}円<br />
-		詳細情報：${item.info}
-		<input type="hidden" name="code" value="${item.code}" />
-		<input type ="submit" value="削除" />
+	<h3>新しく商品を追加する</h3>
+	<form action="/shopping/NewProductServlet?action=del" method="post">
+		商品名：<input type ="text" name="name" /><br />
+		カテゴリーコード：<select name="category_code">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</select><br />
+		価格（税込）：<input type ="text" name="price" /><br />
+		詳細情報：	<input type ="text" name="info" /><br />
+		<input type ="submit" value="新規登録" />
 	</form>
-
-	<form action="/shopping/InfoServlet?action=edit" method="post">
-		<input type ="text" name="info" value="${item.info}"/>
-		<input type="hidden" name="code" value="${item.code}" />
-		<input type ="submit"  value="編集" />
-	</form><br>
-	</c:forEach>
 
 	<%--
 	<c:forEach items="${items}" var="item">

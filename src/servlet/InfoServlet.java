@@ -41,12 +41,7 @@ public class InfoServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		if(action.equals("edit")) {
-
-
-			if(code == 1) {
 				info = request.getParameter("info");
-
-
 				ItemBean2 bean2 = new ItemBean2(info,code);
 				out.println("<html><head><title>  </title></head><body>");
 				out.println("<h1>登録完了</h1><br>");
@@ -61,7 +56,7 @@ public class InfoServlet extends HttpServlet {
 					// TODO 自動生成された catch ブロック
 					e.printStackTrace();
 				}
-			}else if(code == 2) {
+/*			}else if(code == 2) {
 				info = request.getParameter("info");
 
 				ItemBean2 bean2 = new ItemBean2(info,code);
@@ -203,8 +198,7 @@ public class InfoServlet extends HttpServlet {
 					e.printStackTrace();
 				}
 			}
-		}else if(action.equals("del")) {
-			if(code == 1) {
+*/		}else if(action.equals("del")) {
 				out.println("<html><head><title>  </title></head><body>");
 				out.println("<h1>削除完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
@@ -219,7 +213,7 @@ public class InfoServlet extends HttpServlet {
 					// TODO 自動生成された catch ブロック
 					e.printStackTrace();
 				}
-			}else if(code == 2) {
+/*			}else if(code == 2) {
 				out.println("<html><head><title>  </title></head><body>");
 				out.println("<h1>削除完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
@@ -339,7 +333,7 @@ public class InfoServlet extends HttpServlet {
 				}
 			}
 
-
+*/
 		}
 	}
 

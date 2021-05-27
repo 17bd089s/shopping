@@ -58,6 +58,8 @@ public class ShowItemServlet2 extends HttpServlet {
 				request.setAttribute("message", "内部エラーが発生しました。");
 				gotoPage(request, response, "errInternal.jsp");
 			}
+		}else if(action.equals("new")) {
+			gotoPage(request, response, "newproduct.jsp");
 		}
 	}
 
