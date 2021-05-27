@@ -15,7 +15,7 @@
 	<c:forEach items="${items}" var="item">
 	<form action="/shopping/check.jsp?action=productdel" method="post">
 		商品番号：${item.code}
-		<input type ="submit" value="商品を削除" />
+		<input type ="submit" value="商品を削除" class="botan">
 		<input type="hidden" name="code" value="${item.code}" />
 	</form>
 
@@ -24,13 +24,13 @@
 		価格（税込）：${item.price}円<br />
 		詳細情報：${item.info}
 		<input type="hidden" name="code" value="${item.code}" />
-		<input type ="submit" value="削除" />
+		<input type ="submit" value="削除" class="botan">
 	</form>
 
 	<form action="/shopping/InfoServlet?action=edit" method="post">
 		<input type ="text" name="info" value="${item.info}"/>
 		<input type="hidden" name="code" value="${item.code}" />
-		<input type ="submit"  value="編集" />
+		<input type ="submit"  value="編集" class="botan">
 	</form><br>
 	</c:forEach>
 
