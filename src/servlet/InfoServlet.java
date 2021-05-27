@@ -46,7 +46,7 @@ public class InfoServlet extends HttpServlet {
 				out.println("<html><head><title>  </title></head><body>");
 				out.println("<h1>登録完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
-				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a></h3><br>");
 				out.println("</body></html>");
 				try {
 					ItemDAO dao = new ItemDAO();
