@@ -32,16 +32,17 @@ public class NewProductServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		String name = request.getParameter("name");
-		String info = request.getParameter("info");
-		String strcategory_code = request.getParameter("category_code");
-		int category_code = Integer.parseInt(strcategory_code);
-		String strprice = request.getParameter("price");
-		int price = Integer.parseInt(strprice);
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
 
 		try {
+			String name = request.getParameter("name");
+			String info = request.getParameter("info");
+			String strcategory_code = request.getParameter("category_code");
+			int category_code = Integer.parseInt(strcategory_code);
+			String strprice = request.getParameter("price");
+			int price = Integer.parseInt(strprice);
+
 			ItemDAO dao = new ItemDAO();
 			dao.addNewProduct(name, category_code, price, info);
 
@@ -51,10 +52,21 @@ public class NewProductServlet extends HttpServlet {
 			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
 			out.println("</body></html>");
 
-		}catch (DAOException e) {
+		}catch (DAOException | NumberFormatException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
+			showNotIntegerError(out);
+			return;
 		}
+	}
+
+	private void showNotIntegerError(PrintWriter out) {
+		// TODO 自動生成されたメソッド・スタブ
+		out.println("<html><head><title>  </title></head><body>");
+		out.println("<h1>整数を入力してください</h1><br>");
+		out.println("<h3><a href=\"/shopping/newproduct.jsp\">戻る</a>|</h3><br>");
+		out.println("</body></html>");
+
 	}
 
 	/**
