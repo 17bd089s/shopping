@@ -106,6 +106,8 @@ public class CartServlet extends HttpServlet {
 		 * else ifをもう１つ追加（削減用）
 		 *
 		 */
+
+				//商品を追加する処理
 		else if (action.equals("plus")) {
 			try {
 				// リクエストパラメータを取得
@@ -124,7 +126,7 @@ public class CartServlet extends HttpServlet {
 				// 商品個番号の商品を取得
 				ItemDAO dao = new ItemDAO();
 				ItemBean bean = dao.findByPrimariKey(code);
-				// カートに追加する
+				// カートに1つ商品を追加する
 				cart.addCart(bean, +1);
 				// 自画面遷移
 				this.gotoPage(request, response, "cart.jsp");
@@ -134,8 +136,10 @@ public class CartServlet extends HttpServlet {
 				gotoPage(request, response, "errInternal.jsp");
 			}
 		}
-
+				//商品を減らす処理
 		else if (action.equals("mainus")) {
+
+
 			try {
 				// リクエストパラメータを取得
 				String itemCode = request.getParameter("item_code");
@@ -153,7 +157,7 @@ public class CartServlet extends HttpServlet {
 				// 商品個番号の商品を取得
 				ItemDAO dao = new ItemDAO();
 				ItemBean bean = dao.findByPrimariKey(code);
-				// カートに追加する
+				// カートから１つ商品を減らす
 				cart.addCart(bean, -1);
 				// 自画面遷移
 				this.gotoPage(request, response, "cart.jsp");
