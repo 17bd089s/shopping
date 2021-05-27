@@ -251,27 +251,51 @@ public class ItemDAO {
 		if (con == null)
 		getConnection();
 		PreparedStatement pstmt = null;
-	try {
-		String sql ="insert into item(category_code,name,price,info) values(?,?,?,?)";
-		pstmt = con.prepareStatement(sql);
-		pstmt.setInt(1, category_code);
-		pstmt.setString(2, name);
-		pstmt.setInt(3, price);
-		pstmt.setString(4, info);
-		pstmt.executeUpdate();
-	}catch (SQLException e) {
-		e.printStackTrace();
-		throw new DAOException("レコードの取得に失敗しました。");
-	} finally {
 		try {
+			String sql ="insert into item(category_code,name,price,info) values(?,?,?,?)";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, category_code);
+			pstmt.setString(2, name);
+			pstmt.setInt(3, price);
+			pstmt.setString(4, info);
+			pstmt.executeUpdate();
+		}catch (SQLException e) {
+			e.printStackTrace();
+			throw new DAOException("レコードの取得に失敗しました。");
+		} finally {
+			try {
 
-			if (pstmt != null) pstmt.close();
-			this.close();
-		} catch (Exception e) {
-			throw new DAOException("リソースの解放に失敗しました。");
+				if (pstmt != null) pstmt.close();
+				this.close();
+			} catch (Exception e) {
+				throw new DAOException("リソースの解放に失敗しました。");
+			  }
+
 		  }
+	}
+	public void delProduct(int code) throws DAOException{
+		ItemBean2 bean2 = new ItemBean2();
+		if (con == null)
+		getConnection();
+		PreparedStatement pstmt = null;
+		try {
+			String sql ="delete from item where code = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, code);
+			pstmt.executeUpdate();
+		}catch (SQLException e) {
+			e.printStackTrace();
+			throw new DAOException("レコードの取得に失敗しました。");
+		} finally {
+			try {
 
-	  }
+				if (pstmt != null) pstmt.close();
+				this.close();
+			} catch (Exception e) {
+				throw new DAOException("リソースの解放に失敗しました。");
+			  }
+
+		  }
 }
 
 

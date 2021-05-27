@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<% String code = request.getParameter("code"); %>
+<% int itemcode = Integer.parseInt(code); %>
+<% request.setAttribute("itemcode", itemcode); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,28 +13,14 @@
 	<!-- メニュー -->
 	<jsp:include page="/menu2.jsp" />
 
-	<h3>商品一覧</h3>
-	<c:forEach items="${items}" var="item">
-	<form action="/shopping/check.jsp?action=productdel" method="post">
-		商品番号：${item.code}
-		<input type ="submit" value="商品を削除" />
-		<input type="hidden" name="code" value="${item.code}" />
+	<h3>本当に消去してもよろしいですか</h3>
+	<form action="/shopping/InfoServlet?action=productdel" method="post">
+		<input type ="submit" value="はい" />
+		<input type="hidden" name="code" value="${itemcode}" />
 	</form>
-
-	<form action="/shopping/InfoServlet?action=del" method="post">
-		商品名：${item.name}<br />
-		価格（税込）：${item.price}円<br />
-		詳細情報：${item.info}
-		<input type="hidden" name="code" value="${item.code}" />
-		<input type ="submit" value="削除" />
+	<form action="/shopping/list2.jsp?action=return" method="post">
+		<input type ="submit" value="いいえ" />
 	</form>
-
-	<form action="/shopping/InfoServlet?action=edit" method="post">
-		<input type ="text" name="info" value="${item.info}"/>
-		<input type="hidden" name="code" value="${item.code}" />
-		<input type ="submit"  value="編集" />
-	</form><br>
-	</c:forEach>
 
 	<%--
 	<c:forEach items="${items}" var="item">
