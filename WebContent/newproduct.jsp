@@ -11,17 +11,14 @@
 	<!-- メニュー -->
 	<jsp:include page="/menu2.jsp" />
 
-	<h3>新しく商品を追加する</h3>
-	<h2>カテゴリーコード</h2>
-	<h3>1:本</h3>
-	<h3>2:DVD</h3>
-	<h3>3:ゲーム</h3>
+
 	<form action="/shopping/NewProductServlet?action=del" method="post">
+		<br>
 		商品名：<input type ="text" name="name" /><br />
 		カテゴリーコード：<select name="category_code">
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
+			<option value="1">1：本</option>
+			<option value="2">2：DVD</option>
+			<option value="3">3：ゲーム</option>
 		</select><br />
 		価格（税込）：<input type ="text" name="price" /><br />
 		詳細情報：	<input type ="text" name="info" /><br />
