@@ -31,7 +31,7 @@
 		</select>個<br/>
 		<input type="hidden" name="item_code" value="${item.code}" />
 		<input type="submit" value="カートに追加" />
-	</form>
+	</form><br>
 	</c:forEach>
 </body>
 </html>
