@@ -12,8 +12,13 @@
 	<jsp:include page="/menu2.jsp" />
 
 	<h3>新しく商品を追加する</h3>
-	<form action="/shopping/InfoServlet?action=del" method="post">
+	<form action="/shopping/NewProductServlet?action=del" method="post">
 		商品名：<input type ="text" name="name" /><br />
+		カテゴリーコード：<select name="category_code">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</select><br />
 		価格（税込）：<input type ="text" name="price" /><br />
 		詳細情報：	<input type ="text" name="info" /><br />
 		<input type ="submit" value="新規登録" />
