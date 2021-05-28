@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/stylesheet.css" >
 <!-- メニュー -->
-<h3><a href="/shopping/ShowItemServlet?action=top">ホーム</a></h3>
+<h3><a href="/shopping/ShowItemServlet?action=top" class="home">ホーム</a></h3>
 
 <div class="category">
 <c:forEach items="${categories}" var="category">

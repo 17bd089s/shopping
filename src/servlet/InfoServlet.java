@@ -43,7 +43,7 @@ public class InfoServlet extends HttpServlet {
 		if(action.equals("edit")) {
 				info = request.getParameter("info");
 				ItemBean2 bean2 = new ItemBean2(info,code);
-				out.println("<html><head><title>  </title></head><body>");
+				out.println("<html><head><title> 商品登録 </title></head><body>");
 				out.println("<h1>登録完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
 				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a></h3><br>");
@@ -57,10 +57,10 @@ public class InfoServlet extends HttpServlet {
 					e.printStackTrace();
 				}
 		}else if(action.equals("del")) {
-				out.println("<html><head><title>  </title></head><body>");
+				out.println("<html><head><title> 削除完了 </title></head><body>");
 				out.println("<h1>削除完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
-				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a></h3><br>");
 				out.println("</body></html>");
 				try {
 					ItemDAO dao = new ItemDAO();
@@ -76,10 +76,10 @@ public class InfoServlet extends HttpServlet {
 			try {
 				ItemDAO dao = new ItemDAO();
 				dao.delProduct(code);
-				out.println("<html><head><title>  </title></head><body>");
+				out.println("<html><head><title> 商品削除完了 </title></head><body>");
 				out.println("<h1>商品削除完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
-				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
+				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a></h3><br>");
 				out.println("</body></html>");
 
 			} catch (DAOException e) {
