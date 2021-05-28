@@ -4,16 +4,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/stylesheet.css" >
 <meta charset="UTF-8">
 <title>Welcom shopping!</title>
 </head>
-<body>
+<body style="text-align:center">
 	<!-- メニュー -->
-	<jsp:include page="/menu.jsp" />
+	<jsp:include page="/menu.jsp" /><br>
 
 	<h3>ご注文ありがとうございました。</h3>
 	<p>お客様の注文番号は</p>
-	<h3>${orderNumber}</h3>
+	<h3 style="font-size:50px;">${orderNumber}</h3>
 	<p>になります。</p>
 
 </body>
