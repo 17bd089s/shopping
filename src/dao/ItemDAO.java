@@ -193,6 +193,7 @@ public class ItemDAO {
 			}
 		}
 	}
+	// 詳細情報（info）をデータベースに追加する
 	public void addInfo(String info, int code) throws DAOException{
 			ItemBean2 bean2 = new ItemBean2();
 			if (con == null)
@@ -219,7 +220,7 @@ public class ItemDAO {
 		  }
 	}
 
-
+	// info(詳細情報)をデータベースから削除する
 	public void delInfo(int code) throws DAOException{
 		ItemBean2 bean2 = new ItemBean2();
 
@@ -245,7 +246,7 @@ public class ItemDAO {
 
 		}
 	}
-
+	// 新しい商品をデータベースに追加する
 	public void addNewProduct(String name, int category_code, int price, String info) throws DAOException{
 		ItemBean2 bean2 = new ItemBean2();
 		if (con == null)
@@ -273,8 +274,9 @@ public class ItemDAO {
 
 		  }
 	}
+	// 登録してある商品自体をデータベースから削除する
 	public void delProduct(int code) throws DAOException{
-		ItemBean2 bean2 = new ItemBean2();
+		
 		if (con == null)
 		getConnection();
 		PreparedStatement pstmt = null;

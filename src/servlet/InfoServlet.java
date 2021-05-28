@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bean.ItemBean2;
 import dao.DAOException;
 import dao.ItemDAO;
 
@@ -39,10 +38,10 @@ public class InfoServlet extends HttpServlet {
 		String info;
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-
+		// 詳細情報の「編集」が押された際の処理
 		if(action.equals("edit")) {
 				info = request.getParameter("info");
-				ItemBean2 bean2 = new ItemBean2(info,code);
+
 				out.println("<html><head><title>  </title></head><body>");
 				out.println("<h1>登録完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
@@ -56,6 +55,7 @@ public class InfoServlet extends HttpServlet {
 					// TODO 自動生成された catch ブロック
 					e.printStackTrace();
 				}
+		// 詳細情報の「削除」が押された場合の処理
 		}else if(action.equals("del")) {
 				out.println("<html><head><title>  </title></head><body>");
 				out.println("<h1>削除完了</h1><br>");
@@ -71,7 +71,7 @@ public class InfoServlet extends HttpServlet {
 					// TODO 自動生成された catch ブロック
 					e.printStackTrace();
 				}
-
+		// 登録してある商品を削除する際の処理
 		}else if(action.equals("productdel")){
 			try {
 				ItemDAO dao = new ItemDAO();
