@@ -12,11 +12,16 @@ h1{
 	text-align:center;
 }
 
+h3{
+	font-family:fantasy;
+}
 
 a {
 	text-decoration:none;
-	font-size:20px;
+	font-size:17px;
 }
+
+
 
 .category {
 	text-align:center;
@@ -38,10 +43,11 @@ a {
 .top-main{
 	text-align:center;
 	font-size:35px;
+	font-family:monospace;
 }
 
-.top-body{
-
+.check-body{
+	background-color:powderblue;
 }
 
 .list-body{
@@ -76,5 +82,8 @@ a {
 	cursor:pointer;
 }
 
+a.home{
+	font-size:30px;
+}
 
 
