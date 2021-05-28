@@ -34,15 +34,19 @@ public class NewProductServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
+		String name = request.getParameter("name");
+		String info = request.getParameter("info");
+		String strcategory_code = request.getParameter("category_code");
+		int category_code = Integer.parseInt(strcategory_code);
+		String strprice = request.getParameter("price");
+
+		if(name == null||name.length() == 0 ||strprice == null || strprice.length() == 0) {
+			showNotEnterdError(out);
+			return;
+		}else {
 
 		try {
-			String name = request.getParameter("name");
-			String info = request.getParameter("info");
-			String strcategory_code = request.getParameter("category_code");
-			int category_code = Integer.parseInt(strcategory_code);
-			String strprice = request.getParameter("price");
 			int price = Integer.parseInt(strprice);
-
 			ItemDAO dao = new ItemDAO();
 			dao.addNewProduct(name, category_code, price, info);
 
@@ -58,6 +62,16 @@ public class NewProductServlet extends HttpServlet {
 			showNotIntegerError(out);
 			return;
 		}
+		}
+	}
+
+	private void showNotEnterdError(PrintWriter out) {
+		out.println("<html><head><title>  </title></head><body>");
+		out.println("<h1>商品名と価格を入力してください</h1><br>");
+		out.println("<h3><a href=\"/shopping/newproduct.jsp\">戻る</a>|</h3><br>");
+		out.println("</body></html>");
+
+
 	}
 
 	private void showNotIntegerError(PrintWriter out) {
@@ -68,6 +82,8 @@ public class NewProductServlet extends HttpServlet {
 		out.println("</body></html>");
 
 	}
+
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
