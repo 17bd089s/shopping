@@ -162,16 +162,16 @@ public class CartServlet extends HttpServlet {
 					CartBean cart = (CartBean) session.getAttribute("cart");
 					*/
 					// 取得したカートがnullの場合：初めて商品をカートに追加
-					if (cart == null) {
+					/*if (cart == null) {
 						cart = new CartBean();
 						session.setAttribute("cart", cart);
-					}
+					}*/
 					// 商品個番号の商品を取得
 					ItemDAO dao = new ItemDAO();
 					ItemBean bean = dao.findByPrimariKey(code);
 
 
-					// カートに追加する
+					// カートから１つ商品を削除する
 					cart.addCart(bean, -1);
 					// 自画面遷移
 					this.gotoPage(request, response, "cart.jsp");

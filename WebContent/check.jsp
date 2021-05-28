@@ -3,13 +3,16 @@
 <% String code = request.getParameter("code"); %>
 <% int itemcode = Integer.parseInt(code); %>
 <% request.setAttribute("itemcode", itemcode); %>
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/stylesheet.css" >
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Welcome shopping!</title>
+<title>削除確認</title>
 </head>
-<body>
+<body class="ckeck-body">
+
 	<!-- メニュー -->
 	<jsp:include page="/menu2.jsp" />
 
