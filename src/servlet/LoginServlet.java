@@ -38,8 +38,11 @@ public class LoginServlet extends HttpServlet {
 				RequestDispatcher rd = request.getRequestDispatcher("/menu2.jsp");
 				rd.forward(request, response);
 			} else {
-				out.println("<html><head><title>ShowCart</title></head><body>");
+				out.println("<html><head>"
+						+ "<link rel=\\\"stylesheet\\\" type=\\\"text/css\\\" href=\\\"\"+ context +\"/stylesheet.css\\\" >"
+						+ "<title>ShowCart</title></head><body>");
 				out.println("<h1>ユーザ名またはパスワードが違います</h1>");
+				out.println("</body></html>");
 			}
 		} else if (action.equals("logout")) {
 			// すでに作成されているセッション領域を取得する。新しくは作成しない
@@ -47,8 +50,11 @@ public class LoginServlet extends HttpServlet {
 			if (session != null) {
 				// セッション領域を無効にする
 				session.invalidate();
-				out.println("<html><head><title>ShowCart</title></head><body>");
+				out.println("<html><head>"
+						+ "<link rel=\\\"stylesheet\\\" type=\\\"text/css\\\" href=\\\"\"+ context +\"/stylesheet.css\\\" >"
+						+ "<title>ShowCart</title></head><body>");
 				out.println("<h1>ログアウトしました</h1>");
+				out.println("</body></html>");
 			}
 		}
 	}
