@@ -39,6 +39,7 @@ public class NewProductServlet extends HttpServlet {
 		String strcategory_code = request.getParameter("category_code");
 		int category_code = Integer.parseInt(strcategory_code);
 		String strprice = request.getParameter("price");
+		String context = request.getContextPath();
 
 		if(name == null||name.length() == 0 ||strprice == null || strprice.length() == 0) {
 			showNotEnterdError(out);
@@ -49,8 +50,10 @@ public class NewProductServlet extends HttpServlet {
 			int price = Integer.parseInt(strprice);
 			ItemDAO dao = new ItemDAO();
 			dao.addNewProduct(name, category_code, price, info);
-
-			out.println("<html><head><title>  </title></head><body>");
+			//String context = request.getContextPath();
+			out.println("<html><head>"
+					+ "<link rel=\"stylesheet\" type=\"text/css\" href=\""+ context +"/stylesheet.css\" >"
+					+ "<title>  </title></head><body>");
 			out.println("<h1>新規作成完了</h1><br>");
 			out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
 			out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a>|</h3><br>");
@@ -66,7 +69,9 @@ public class NewProductServlet extends HttpServlet {
 	}
 
 	private void showNotEnterdError(PrintWriter out) {
-		out.println("<html><head><title>  </title></head><body>");
+		out.println("<html><head>"
+				+ "<link rel=\\\"stylesheet\\\" type=\\\"text/css\\\" href=\\\"\"+ context +\"/stylesheet.css\\\" >"
+				+ "<title>  </title></head><body>");
 		out.println("<h1>商品名と価格を入力してください</h1><br>");
 		out.println("<h3><a href=\"/shopping/newproduct.jsp\">戻る</a>|</h3><br>");
 		out.println("</body></html>");
@@ -76,7 +81,9 @@ public class NewProductServlet extends HttpServlet {
 
 	private void showNotIntegerError(PrintWriter out) {
 		// TODO 自動生成されたメソッド・スタブ
-		out.println("<html><head><title>  </title></head><body>");
+		out.println("<html><head>"
+				+ "<link rel=\\\"stylesheet\\\" type=\\\"text/css\\\" href=\\\"\"+ context +\"/stylesheet.css\\\" >"
+				+ "<title>  </title></head><body>");
 		out.println("<h1>整数を入力してください</h1><br>");
 		out.println("<h3><a href=\"/shopping/newproduct.jsp\">戻る</a>|</h3><br>");
 		out.println("</body></html>");
