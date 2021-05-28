@@ -59,7 +59,7 @@ public class InfoServlet extends HttpServlet {
 		}else if(action.equals("del")) {
 				out.println("<html><head>"
 						+ "<link rel=\\\"stylesheet\\\" type=\\\"text/css\\\" href=\\\"\"+ context +\"/stylesheet.css\\\" >"
-						+ "<title> 削除完了 </title></head><body>");
+						+ "<title> 削除完了 </title></head><body >");
 				out.println("<h1>削除完了</h1><br>");
 				out.println("<h3><a href=\"/shopping/ShowItemServlet2?action=top\">トップページへ</a></h3><br>");
 				out.println("<h3><a href=\"/shopping/menu2.jsp\">登録を続ける</a></h3><br>");
