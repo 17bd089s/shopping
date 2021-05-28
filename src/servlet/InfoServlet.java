@@ -39,7 +39,7 @@ public class InfoServlet extends HttpServlet {
 		String info;
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		String context = request.getContextPath();
+
 
 		if(action.equals("edit")) {
 				info = request.getParameter("info");
